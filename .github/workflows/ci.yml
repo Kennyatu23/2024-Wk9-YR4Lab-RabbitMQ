@@ -33,4 +33,4 @@ jobs:
       - name: Push Docker Image
         run:
           docker tag product_pipe_image ${{ atukenny }}/product_pipe_image:latest |
-          && docker push ${{ Collegelife24# }}/product_pipe_image:latest
+          && docker push ${{ atukenny }}/product_pipe_image:latest
