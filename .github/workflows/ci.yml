@@ -12,8 +12,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name:
-          Get code from repo
+      - name: Get code from repo
         uses: actions/checkout@v4
 
       - name: Get Jdk
@@ -22,4 +21,4 @@ jobs:
         distribution: 'temurin'
 
       - name: Package with maven
-      - run: mvn clean package
+        run: mvn clean package
