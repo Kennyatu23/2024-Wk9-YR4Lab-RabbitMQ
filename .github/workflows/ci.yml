@@ -16,8 +16,9 @@ jobs:
 
       - name: Get Jdk
         uses: actions/setup-java@v4
-        java-version: '21'
-        distribution: 'temurin'
-  
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+
       - name: Package with maven
         run: mvn clean package
