@@ -17,8 +17,20 @@ jobs:
       - name: Get Jdk
         uses: actions/setup-java@v4
         with:
-          java-version: '21'
+          java-version: '20'
           distribution: 'temurin'
 
       - name: Package with maven
         run: mvn clean package
+
+      - name: Build Docker Image
+        run: docker/login-action@v2
+        with:
+          username: ${{ atukenny}}
+          password: ${{ Collegelife24#}}
+
+# Step to push Docker image to Docker Hub
+      - name: Push Docker Image
+        run:
+          docker tag product_pipe_image ${{ atukenny }}/product_pipe_image:latest |
+          && docker push ${{ Collegelife24# }}/product_pipe_image:latest
